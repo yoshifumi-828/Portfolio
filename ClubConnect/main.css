@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body,
+h1 {
+    margin: 0px;
+}
+
+header {
+    background-color: rgb(91, 136, 231);
+    height: 90px;
+}
+
+@media screen and (max-width:1000px) {
+    header {
+        width: 1000px;
+    }
+}
+
+.header_contents>div {
+    width: 33%;
+    height: 90px;
+}
+
+.header_contents {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titlepic {
+    display: flex;
+    align-items: center;
+}
+
+.titlepic>img {
+    height: 60px;
+}
+
+.pagetitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagetitle>h1 {
+    text-align: center;
+    color: white;
+}
+
+.body {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adminlogin {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.adminlogin>form>input {
+    font-size: larger;
+}
+
+/*Form関連*/
+
+.form {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+}
+
+.form>div {
+    padding: 20px 0px;
+}
+
+.form>div>input {
+    font-size: larger;
+    box-sizing: border-box;
+}
+
+.form>h2 {
+    margin: 0px;
+    text-align: center;
+}
+
+/*ボタン位置調整*/
+
+div.buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.buttons>div {
+    margin: 10px;
+}
+
+.buttons>div>input {
+    font-size: larger;
+}
+
+
+
+
+/*エラー、警告文*/
+.error_text {
+    color: rgb(233, 85, 48);
+    text-align: center;
+}
+
+/*インフォメーション*/
+.info_text{
+    color: aquamarine;
+    text-align: center;
+}
+
+/* table要素の文字よせ */
+.center{
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+
+/* [1] https://moshashugyo.com/media/css-form-customize を参考に作成*/
+.form-text {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-text:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.form-submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(60, 88, 146);
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.form-submit-button:hover {
+    background-color: rgb(21, 38, 71);
+}
+
+.form-submit-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+
+/*管理者ログインボタン調整*/
+.form-admin-button {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(194, 69, 85);
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.form-admin-button:hover {
+    background-color: rgb(133, 35, 68);
+}
+
+.form-admin-button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(75, 10, 37);
+}
+
+/* ラジオボタン */
+.form-radio input {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.form-radio-name {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    color: #666;
+}
+
+.form-radio-name:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.form-radio input:checked+.form-radio-name:before {
+    border: 0.3em solid rgb(33, 150, 243);
+}
+
+.form-radio input:checked+.form-radio-name {
+    color: rgb(33, 150, 243);
+}
+
+.form-radio input:focus+.form-radio-name {
+    color: rgb(33, 150, 243);
+}
+
+.form-radio input.focus-visible+.form-radio-name .form-radio-text {
+    background: linear-gradient(transparent 90%, rgba(33, 150, 243, 0.3) 90%);
+}
+
+/* テキストフォーム */
+.form-item-textarea textarea {
+    height: 300px;
+}
+
+.form-textarea {
+    display: block;
+    width: 100%;
+    padding: 16px 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: vertical;
+    height: 300px;
+    max-height: 400px;
+    min-height: 200px;
+}
+
+.form-textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+/*[1]　ここまで*/
+
+/* [2] https://webliker.info/css/75964/ を参考に作成 */
+
+.standard_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.standard_table th,
+.standard_table td {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.standard_table tr:nth-child(odd) {
+    background-color: #eee
+}
+
+.standard_table th {
+    background-color: rgb(114, 168, 250);
+}
+
+/*[2] ここまで */
